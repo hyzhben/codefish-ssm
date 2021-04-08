@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71212123-1124-44b1-b399-a24a729a5ae3" name="Default Changelist" comment="简单的Mybatis查询">
+    <list default="true" id="71212123-1124-44b1-b399-a24a729a5ae3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/java/com/codefish/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/java/com/codefish/dao/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-01/src/main/java/com/codefish/dao/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/main/java/com/codefish/dao/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-01/src/test/java/com/codefish/UserDao/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/src/test/java/com/codefish/UserDao/UserDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-01/target/classes/com/codefish/dao/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-01/target/classes/com/codefish/dao/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/target/classes/com/codefish/dao/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-01/target/test-classes/com/codefish/UserDao/UserDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-01/target/test-classes/com/codefish/UserDao/UserDaoTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +40,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -44,9 +52,9 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.UserDaoTest.updateUser">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -54,6 +62,54 @@
         </value>
       </option>
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoTest.addUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codefish.UserDao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codefish.UserDao" />
+      <option name="MAIN_CLASS_NAME" value="com.codefish.UserDao.UserDaoTest" />
+      <option name="METHOD_NAME" value="addUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoTest.deleteUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codefish.UserDao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codefish.UserDao" />
+      <option name="MAIN_CLASS_NAME" value="com.codefish.UserDao.UserDaoTest" />
+      <option name="METHOD_NAME" value="deleteUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoTest.getUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codefish.UserDao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codefish.UserDao" />
+      <option name="MAIN_CLASS_NAME" value="com.codefish.UserDao.UserDaoTest" />
+      <option name="METHOD_NAME" value="getUserById" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -74,8 +130,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserDaoTest.updateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis-01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codefish.UserDao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codefish.UserDao" />
+      <option name="MAIN_CLASS_NAME" value="com.codefish.UserDao.UserDaoTest" />
+      <option name="METHOD_NAME" value="updateUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserDaoTest.updateUser" />
+        <item itemvalue="JUnit.UserDaoTest.deleteUser" />
+        <item itemvalue="JUnit.UserDaoTest.addUser" />
+        <item itemvalue="JUnit.UserDaoTest.getUserById" />
         <item itemvalue="JUnit.UserDaoTest.test" />
       </list>
     </recent_temporary>
@@ -88,7 +164,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1617885960454</updated>
-      <workItem from="1617885962840" duration="4110000" />
+      <workItem from="1617885962840" duration="7906000" />
     </task>
     <task id="LOCAL-00001" summary="简单的Mybatis查询">
       <created>1617888900084</created>
@@ -104,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617889261639</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="简单的Mybatis查询">
+      <created>1617890251032</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617890251032</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
