@@ -6,7 +6,9 @@ import com.codefish.utils.MybatisUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author: hyzh
@@ -39,7 +41,10 @@ public class UserDaoTest {
 
 
     }
-    
+
+
+
+
     @Test
     public void getUserById(){
         SqlSession sqlSession = MybatisUtils.getSqlSession();
@@ -57,21 +62,33 @@ public class UserDaoTest {
     @Test
     public void addUser(){
         SqlSession sqlSession = MybatisUtils.getSqlSession();
-
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-
         User user = new User(6,"YH","YH");
         int i = mapper.addUser(user);
+        if(i>0){
+            System.out.println("插入数据成功");
+        }
+        sqlSession.commit();
+        sqlSession.close();
+    }
 
+    // 增删改必须要提交事务
+    @Test
+    public void addUser2(){
+        SqlSession sqlSession = MybatisUtils.getSqlSession();
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+
+        Map<String, Object> map = new HashMap<String,Object>();
+        map.put("userid",7);
+        map.put("username","username");
+        map.put("userpwd","userpwd");
+
+        int i = mapper.addUser2(map);
 
         if(i>0){
             System.out.println("插入数据成功");
         }
-
-
         sqlSession.commit();
-
-
         sqlSession.close();
     }
     @Test
@@ -81,7 +98,7 @@ public class UserDaoTest {
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
 
 
-        int i = mapper.updateUser(new User(6,"6","six"));
+        int i = mapper.updateUser(new User(7,"6","six"));
 
 
         if(i>0){
@@ -109,5 +126,24 @@ public class UserDaoTest {
 
         sqlSession.commit();
         sqlSession.close();
+    }
+
+
+    @Test
+    /*模糊查询*/
+    public void getUserLike(){
+        SqlSession sqlSession = MybatisUtils.getSqlSession();
+
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        List<User> userList = mapper.getUserLike("%y%");
+
+        for (User user : userList) {
+            System.out.println(user);
+        }
+
+        sqlSession.close();
+
+
+
     }
 }

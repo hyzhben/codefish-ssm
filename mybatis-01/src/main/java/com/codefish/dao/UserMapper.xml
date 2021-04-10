@@ -6,19 +6,27 @@
 <!--namespace绑定一个指定的Dao/Mapper接口-->
 <mapper namespace="com.codefish.dao.UserMapper">
     <!--查询语句-->
-    <select id="getUserList" resultType="com.codefish.pojo.User">
+    <select id="getUserList" resultType="User">
         select * from mybatis.user
     </select>
 
-    <select id="getUserById" parameterType="int" resultType="com.codefish.pojo.User">
+    <select id="getUserLike" resultType="User">
+        select * from mybatis.user where name like "%"#{name}"%"
+    </select>
+
+    <select id="getUserById" parameterType="int" resultType="User">
         select * from mybatis.user where id = #{id}
     </select>
 
-    <insert id="addUser" parameterType="com.codefish.pojo.User">
+    <insert id="addUser" parameterType="User">
         insert into mybatis.user (id,name,password) values (#{id},#{name},#{password})
     </insert>
 
-    <update id="updateUser" parameterType="com.codefish.pojo.User">
+    <insert id="addUser2" parameterType="map">
+        insert into mybatis.user (id,name,password) values (#{userid},#{username},#{userpwd})
+    </insert>
+
+    <update id="updateUser" parameterType="User">
         update mybatis.user
         set name = #{name}, password = #{password}
         where id = #{id};
