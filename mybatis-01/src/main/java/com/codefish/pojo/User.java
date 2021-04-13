@@ -1,10 +1,13 @@
 package com.codefish.pojo;
 
+import org.apache.ibatis.type.Alias;
+
 /**
  * @author: hyzh
  * @create: 2021-04-08 18:34
  */
 // 实体类
+@Alias("hello") // 起别名
 public class User {
     private int id;
     private String name;

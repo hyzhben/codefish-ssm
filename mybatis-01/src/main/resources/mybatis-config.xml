@@ -14,8 +14,11 @@
     </properties>
 
     <!--设置别名-->
+    <!--
+        <typeAlias type="com.codefish.pojo.User" alias="User"/>
+    -->
     <typeAliases>
-        <typeAlias type="com.codefish.pojo.User" alias="User"/> 
+        <package name="com.codefish.pojo"/>
     </typeAliases>
 
     <environments default="development"> <!--默认是开发环境，可以有多个环境，如test测试环境-->

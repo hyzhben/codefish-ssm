@@ -6,7 +6,7 @@
 <!--namespace绑定一个指定的Dao/Mapper接口-->
 <mapper namespace="com.codefish.dao.UserMapper">
     <!--查询语句-->
-    <select id="getUserList" resultType="com.codefish.pojo.User">
+    <select id="getUserList" resultType="hello">
         select * from mybatis.user
     </select>
 
@@ -14,7 +14,7 @@
         select * from mybatis.user where name like "%"#{name}"%"
     </select>
 
-    <select id="getUserById" parameterType="int" resultType="User">
+    <select id="getUserById" parameterType="int" resultType="com.codefish.pojo.User">
         select * from mybatis.user where id = #{id}
     </select>
 
