@@ -1,0 +1,6 @@
+2021-04-13 22:52:23 下午 [Thread: main][ Class:com.codefish.UserDao.UserDaoTest >> Method: com.codefish.UserDao.UserDaoTest.test(UserDaoTest.java:27) ]
+INFO:查询所有user列表
+2021-04-13 22:53:18 下午 [Thread: main][ Class:com.codefish.UserDao.UserDaoTest >> Method: com.codefish.UserDao.UserDaoTest.test(UserDaoTest.java:27) ]
+INFO:info 查询所有user列表
+2021-04-13 22:53:18 下午 [Thread: main][ Class:com.codefish.UserDao.UserDaoTest >> Method: com.codefish.UserDao.UserDaoTest.test(UserDaoTest.java:29) ]
+ERROR:error 查询所有user列表

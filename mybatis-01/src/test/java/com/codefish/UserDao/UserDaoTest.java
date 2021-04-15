@@ -4,6 +4,7 @@ import com.codefish.dao.UserMapper;
 import com.codefish.pojo.User;
 import com.codefish.utils.MybatisUtils;
 import org.apache.ibatis.session.SqlSession;
+import org.apache.log4j.Logger;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -16,11 +17,17 @@ import java.util.Map;
  */
 
 public class UserDaoTest {
+    static Logger logger = Logger.getLogger(UserDaoTest.class);
     
     @Test
     public void test(){
         // 第一步：获取SqlSession对象
         SqlSession sqlSession = MybatisUtils.getSqlSession();
+
+        logger.info("info 查询所有user列表");
+        logger.debug("debug 查询所有user列表");
+        logger.error("error 查询所有user列表");
+
 
         try {
             // 方式一：getMapper
@@ -46,6 +53,23 @@ public class UserDaoTest {
 
 
     @Test
+    public void getUserByLimit(){
+        SqlSession sqlSession = MybatisUtils.getSqlSession();
+
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+
+        HashMap<String,Integer> map  = new HashMap<>();
+        map.put("startIndex",0);
+        map.put("pageSize",2);
+
+        List<User> userList = mapper.getUserByLimit(map);
+        for (User user : userList) {
+            System.out.println(user);
+        }
+        sqlSession.close();
+    }
+
+    @Test
     public void getUserById(){
         SqlSession sqlSession = MybatisUtils.getSqlSession();
 
@@ -58,12 +82,12 @@ public class UserDaoTest {
         sqlSession.close();
     }
 
-    // 增删改必须要提交事务
+    // 增删改必须要提交事务，可以设置自动提交事务（sqlSessionFactory.openSession(true);）
     @Test
     public void addUser(){
         SqlSession sqlSession = MybatisUtils.getSqlSession();
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-        User user = new User(6,"YH","YH");
+        User user = new User(8,"YH","YH");
         int i = mapper.addUser(user);
         if(i>0){
             System.out.println("插入数据成功");

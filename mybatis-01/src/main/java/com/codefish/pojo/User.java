@@ -11,15 +11,15 @@ import org.apache.ibatis.type.Alias;
 public class User {
     private int id;
     private String name;
-    private String password;
+    private String pwd;
 
     public User() {
     }
 
-    public User(int id, String name, String password) {
+    public User(int id, String name, String pwd) {
         this.id = id;
         this.name = name;
-        this.password = password;
+        this.pwd = pwd;
     }
 
     public int getId() {
@@ -38,12 +38,12 @@ public class User {
         this.name = name;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPwd() {
+        return pwd;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
     }
 
     @Override
@@ -51,7 +51,7 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
+                ", pwd='" + pwd + '\'' +
                 '}';
     }
 }

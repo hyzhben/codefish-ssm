@@ -6,17 +6,26 @@
 
 <!--configuration核心配置文件-->
 <configuration>
-
-
     <!--加载外部配置文件-->
     <properties resource="db.properties">
         <property name="username" value="root"/>
     </properties>
+    
+    
+    <settings>
+        <!--标准的日志工厂的实现-->
+        <!--<setting name="logImpl" value="STDOUT_LOGGING"/>-->
+        <setting name="logImpl" value="LOG4J"/>
+
+        <!--是否开启驼峰命名自动映射，即从经典数据库列名 A_COLUMN 映射到经典 Java 属性名 aColumn。-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+
+        <!--显示的开启全局缓存，默认值为true-->
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
 
     <!--设置别名-->
-    <!--
-        <typeAlias type="com.codefish.pojo.User" alias="User"/>
-    -->
+    <!--<typeAlias type="com.codefish.pojo.User" alias="User"/>-->
     <typeAliases>
         <package name="com.codefish.pojo"/>
     </typeAliases>
@@ -35,7 +44,19 @@
 
     <!--每一个Mapper.xml都需要再Mybatis核心配置文件中注册-->
     <mappers>
+        <!--使用xml方式：（推荐）-->
         <mapper resource="com/codefish/dao/UserMapper.xml"/>
+        <mapper resource="com/codefish/dao/BlogMapper.xml"/>
+
+        <!--使用class文件绑定注册-->
+        <!--<mapper class="com.codefish.dao.UserMapper"/>-->
+        <!--包扫描方式-->
+       <!--  <package name="com.codefish.dao"/>-->
+
+
+        <mapper resource="com/codefish/dao/TeacherMapper.xml"/>
+        <mapper resource="com/codefish/dao/StudentMapper.xml"/>
+
     </mappers>
 
 </configuration>
